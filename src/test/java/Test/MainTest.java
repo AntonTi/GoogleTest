@@ -8,12 +8,14 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import test.java.PO.HomePage;
 import test.java.PO.SearchPage;
+import test.java.PO.WikiPage;
 
 public class MainTest {
 
     WebDriver driver;
     HomePage homePage;
     SearchPage searchPage;
+    WikiPage wikiPage;
 
     @BeforeMethod
     public void init() {
@@ -21,6 +23,7 @@ public class MainTest {
         driver.manage().window().maximize();
         homePage = new HomePage(driver);
         searchPage = new SearchPage(driver);
+        wikiPage = new WikiPage(driver);
     }
 
     @Test
@@ -49,11 +52,19 @@ public class MainTest {
         Assert.assertEquals(driver.getTitle(), "Selenium — Википедия");
     }
 
+    @Test
+    public void checkWikiPageHeading() {
+        homePage.isShown();
+        homePage.writeSearchWord();
+        homePage.clickSearchBtn();
+        searchPage.goToWikiPage();
+
+        Assert.assertEquals(wikiPage.getWikiHeading(), "Selenium");
+    }
 
     @AfterMethod
     public void close() {
         driver.quit();
     }
-
 
 }

@@ -1,14 +1,22 @@
 package test.java.PO;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.support.ui.WebDriverWait;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 
-public class WikiPage {
-    WebDriver driver;
-    WebDriverWait wait;
+public class WikiPage extends BasePage {
+
+    private By wikiFooter = By.id("footer");
+    private By wikiHeading = By.cssSelector("h1");
 
     public WikiPage(WebDriver driver) {
-        this.driver = driver;
-        wait = new WebDriverWait(driver, 10);
+        super(driver);
     }
+
+    public String getWikiHeading(){
+        wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(wikiFooter));
+        String wikiHead = driver.findElement(wikiHeading).getText();
+        return  wikiHead;
+    }
+
 }
