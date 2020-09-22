@@ -1,13 +1,11 @@
 # Google Web UI automation tests
-___
-### REQUIREMENTS:
-___
+
+## REQUIREMENTS:
 - JDK;
 - apache maven;
 - IntelliJ IDEA (or another IDE).
 
-### INSTALLATION:
-___
+## INSTALLATION:
 - download ChromeDriver (latest stable release):
 <https://chromedriver.chromium.org>
 
@@ -15,7 +13,6 @@ ___
 
 - **MAKE SURE** you have the latest version of Chrome browser installed
 
-### RUN:
-___
+## RUN:
 On command line, type in the following command:
 `mvn clean test`
