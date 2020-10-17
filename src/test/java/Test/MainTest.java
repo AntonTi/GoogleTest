@@ -12,10 +12,10 @@ import test.java.PO.WikiPage;
 
 public class MainTest {
 
-    WebDriver driver;
-    HomePage homePage;
-    SearchPage searchPage;
-    WikiPage wikiPage;
+    private WebDriver driver;
+    private HomePage homePage;
+    private SearchPage searchPage;
+    private WikiPage wikiPage;
 
     @BeforeMethod
     public void init() {
