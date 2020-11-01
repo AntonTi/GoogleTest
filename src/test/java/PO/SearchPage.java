@@ -13,6 +13,7 @@ public class SearchPage extends BasePage {
     }
 
     public SearchPage goToWikiPage() {
+        logger.info("Search Page go to Wiki Page");
         wait.until(ExpectedConditions.elementToBeClickable(wikiRef));
         driver.findElement(wikiRef).click();
         return this;
