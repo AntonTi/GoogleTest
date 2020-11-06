@@ -14,6 +14,7 @@ public class WikiPage extends BasePage {
     }
 
     public String getWikiHeading() {
+        logger.info("get Wiki Heading");
         wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(wikiFooter));
         String wikiHead = driver.findElement(wikiHeading).getText();
         return wikiHead;

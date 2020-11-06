@@ -15,17 +15,25 @@ public class HomePage extends BasePage {
     }
 
     public HomePage isShown() {
+        logger.info("open Home Page");
+        /*logger.trace("trace logger");
+        logger.debug("debug logger");
+        logger.warn("warn logger");
+        logger.error("error logger");
+        logger.fatal("fatal logger");*/
         driver.get("http://www.google.com");
         wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(btnLuck));
         return this;
     }
 
     public HomePage writeSearchWord() {
+        logger.info("write Search Word");
         driver.findElement(inputSearch).sendKeys("Selenium");
         return this;
     }
 
     public HomePage clickSearchBtn() {
+        logger.info("click Search Button");
         wait.until(ExpectedConditions.elementToBeClickable(btnSearch));
         driver.findElement(btnSearch).click();
         return this;
