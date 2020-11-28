@@ -6,7 +6,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 
 public class SearchPage extends BasePage {
 
-    private final By wikiRef = By.cssSelector("a.q.ruhjFe");
+    private final By wikiRef = By.cssSelector("a.ruhjFe.NJLBac.fl");
 
     public SearchPage(WebDriver driver) {
         super(driver);
