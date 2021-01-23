@@ -1,0 +1,15 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="MainSuite">
+    <test name="Test">
+        <classes>
+            <class name="test.java.Test.MainTest">
+                <methods>
+                    <include name="checkHomePageTitle"/>
+                    <include name="checkSearchPageTitle"/>
+                    <include name="checkWikiPageTitle"/>
+                    <exclude name="checkWikiPageHeading"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
