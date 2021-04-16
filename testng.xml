@@ -2,6 +2,7 @@
 <suite name="MainSuite">
     <listeners>
         <listener class-name="test.java.Utils.Listener"/>
+        <listener class-name="test.java.Utils.AnnotationTransformer"/>
     </listeners>
     <test name="Test">
         <classes>
