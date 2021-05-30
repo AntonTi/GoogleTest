@@ -6,9 +6,9 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 
 public class HomePage extends BasePage {
 
-    private final By btnLuck = By.cssSelector(".FPdoLc.tfB0Bf .gNO89b");
-    private final By btnSearch = By.cssSelector(".tfB0Bf .gNO89b");
-    private final By inputSearch = By.name("q");
+    private final By btnLuck = By.xpath("//div[contains(@class, 'FPdoLc lJ9FBc')]//input[@name='btnI']");
+    private final By btnSearch = By.xpath("//div[@class='lJ9FBc']//input[@name='btnK']");
+    private final By inputSearch = By.xpath("//input[@name='q']");
 
     public HomePage(WebDriver driver) {
         super(driver);
