@@ -3,6 +3,7 @@ package test.java.PO;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import test.java.Utils.PropertyLoader;
 
 public class HomePage extends BasePage {
 
@@ -21,7 +22,7 @@ public class HomePage extends BasePage {
         logger.warn("warn logger");
         logger.error("error logger");
         logger.fatal("fatal logger");*/
-        driver.get("http://www.google.com");
+        driver.get(PropertyLoader.getProperty("url"));
         wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(btnLuck));
         return this;
     }
