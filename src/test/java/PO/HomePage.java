@@ -1,5 +1,6 @@
 package test.java.PO;
 
+import io.qameta.allure.Step;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -15,6 +16,7 @@ public class HomePage extends BasePage {
         super(driver);
     }
 
+    @Step("open Home Page")
     public HomePage isShown() {
         logger.info("open Home Page");
         /*logger.trace("trace logger");
@@ -27,12 +29,14 @@ public class HomePage extends BasePage {
         return this;
     }
 
+    @Step("write Search Word")
     public HomePage writeSearchWord() {
         logger.info("write Search Word");
         driver.findElement(inputSearch).sendKeys("Selenium");
         return this;
     }
 
+    @Step("click Search Button")
     public HomePage clickSearchBtn() {
         logger.info("click Search Button");
         wait.until(ExpectedConditions.elementToBeClickable(btnSearch));

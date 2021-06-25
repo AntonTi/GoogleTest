@@ -15,7 +15,7 @@ public class BaseMainTest {
     SearchPage searchPage;
     WikiPage wikiPage;
 
-    @BeforeMethod
+    @BeforeMethod(description = "Initialize custom driver and Page factory")
     public void init(ITestContext context) {
         driver = new ChromeDriver();
         context.setAttribute("WebDriver", driver);
@@ -25,7 +25,7 @@ public class BaseMainTest {
         driver.manage().window().maximize();
     }
 
-    @AfterMethod
+    @AfterMethod(description = "Finalize custom driver")
     public void close() {
         driver.quit();
     }
