@@ -11,7 +11,8 @@
                     <include name="checkHomePageTitle"/>
                     <include name="checkSearchPageTitle"/>
                     <include name="checkWikiPageTitle"/>
-                    <exclude name="checkWikiPageHeading"/>
+                    <include name="checkWikiPageHeading"/>
+                    <exclude name="testFail"/>
                 </methods>
             </class>
         </classes>

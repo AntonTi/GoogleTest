@@ -5,6 +5,8 @@ import io.qameta.allure.SeverityLevel;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import static org.testng.Assert.fail;
+
 public class MainTest extends BaseMainTest {
 
     @Test(description = "check HomePage Title")
@@ -47,4 +49,10 @@ public class MainTest extends BaseMainTest {
         Assert.assertEquals(wikiPage.getWikiHeading(), "Selenium");
     }
 
+    @Test(description = "debug Test for fail result")
+    @Severity(SeverityLevel.TRIVIAL)
+    public void testFail() {
+        homePage.isShown();
+        fail();
+    }
 }
