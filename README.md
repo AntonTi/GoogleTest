@@ -1,9 +1,11 @@
-# Google Web UI automation tests
+# Web UI Automation Test Framework
 
 ## REQUIREMENTS:
 - JDK;
 - apache maven;
-- IntelliJ IDEA (or another IDE).
+- ChromeDriver;
+- Allure (for test report);
+- IntelliJ IDEA (IDE).
 
 ## INSTALLATION:
 - download ChromeDriver (latest stable release):
@@ -16,3 +18,7 @@
 ## RUN:
 On command line, type in the following command:
 `mvn clean test`
+
+## ALLURE REPORT:
+On command line, type in the following command:
+`allure serve allure-results`
