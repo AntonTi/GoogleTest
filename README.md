@@ -1,10 +1,11 @@
 # Web UI Automation Test Framework
 
 ## REQUIREMENTS:
-- JDK;
-- apache maven;
-- ChromeDriver;
+- JDK (1.8 or higher);
+- apache maven (3.6.3 or higher);
+- ChromeDriver (latest version);
 - Allure (for test report);
+- Jenkins (for CI/CD);
 - IntelliJ IDEA (IDE).
 
 ## INSTALLATION:
